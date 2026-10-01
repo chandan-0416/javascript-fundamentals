@@ -166,14 +166,15 @@
 
 //REST Parameter = rest parameter collect remaining arguments into array.
 
-function sum(...numbers) {
-    let total = 0;
+// function sum(...numbers) {
+//     let total = 0;
 
-    for (const number of numbers) {
-        total += number;
-    }
+//     for (const number of numbers) {
+//         total += number;
+//     }
 
-    return total;
-}
+//     return total;
+// }
+// console.log(sum(1, 2, 3, 4));
 
-console.log(sum(1, 2, 3, 4));
+
