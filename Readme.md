@@ -1,4 +1,5 @@
-## Basic JS Concepts
+## REVISION: Basic JS Concepts TO Advanced
+
 1. MODULE 1 — JAVASCRIPT FUNDAMENTALS
 - What JavaScript actually is
 - ECMAScript

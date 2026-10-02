@@ -172,9 +172,219 @@
 //     for (const number of numbers) {
 //         total += number;
 //     }
-
 //     return total;
 // }
 // console.log(sum(1, 2, 3, 4));
 
 
+// console.log(x);
+// var x=10;
+// // var    → initialized with undefined
+// // let    → uninitialized → TDZ
+// // const  → uninitialized → TDZ
+// // function declaration → initialized with function
+
+
+// function a() {
+//     console.log("A");
+// }
+
+// console.log("Start");
+// a();
+// console.log("End");
+
+// // start
+// // A
+// // End
+
+// function a() {
+//     console.log("A");
+//     b();
+//     console.log("B");
+// }
+// function b() {
+//     console.log("C");
+// }
+// a();
+
+// //A
+// //C
+// //B
+
+// function one() {
+//     return two();
+// }
+
+// function two() {
+//     return three();
+// }
+
+// function three() {
+//     return 100;
+// }
+
+// console.log(one()); // 100
+
+
+// function test() {
+//     console.log("1");
+
+//     function inner() {
+//         console.log("2");
+//     }
+
+//     inner(); // 
+
+//     console.log("3");
+// }
+
+// test(); //1,2,3
+
+
+
+// function a() {
+//     console.log("A");
+//     b();
+//     console.log("B");
+// }
+
+// function b() {
+//     console.log("C");
+//     d();
+//     console.log("D");
+// }
+
+// function d() {
+//     console.log("E");
+// }
+// a();
+
+
+// function outer() {
+//     let x = 10;
+//     function inner() {
+//         console.log(x);
+//     }
+//     inner();
+// }
+// outer();
+// //10
+
+
+// console.log("A");
+// setTimeout(() => {
+//     console.log("B");
+// }, 0);// 0ms , does not mean "executing immediately" => placed in the task queue /timer
+// Promise.resolve().then(() => { // Microtask Queue
+//     console.log("C");
+// });
+
+// console.log("D");
+// //A
+// //D
+// //C
+// //B
+
+
+// function a() {
+//     console.log("A");
+//     Promise.resolve().then(() => {
+//         console.log("B");
+//     });
+//     b();
+//     console.log("C");
+// }
+// function b() {
+//     console.log("D");
+//     setTimeout(() => {
+//         console.log("E");
+//     }, 0);
+//     console.log("F");
+// }
+// a();
+// console.log("G");
+
+// //A
+// //D
+// //F
+// //C
+// //G
+// //B
+// //E
+
+//order of Execute the code: Synchronous code -> Microtask queue -> Timer callback
+
+
+// console.log("A");
+// setTimeout(() => {
+//     console.log("B");
+//     Promise.resolve().then(() => {
+//         console.log("C");
+//     });
+// }, 0);
+// Promise.resolve().then(() => {
+//     console.log("D");
+//     setTimeout(() => {
+//         console.log("E");
+//     }, 0);
+// });
+// console.log("F");
+
+// //A
+// //F
+// //D
+// //B
+// //C
+// //E
+
+//Order of Execution: Global Stack -> Microtask queue -> timer/task queue -> new microtask -> new timer
+
+// function countDown(n) {
+//     if (n === 0) {
+//         return;
+//     }
+//     console.log(n);
+//     countDown(n - 1);
+// }
+// countDown(3);
+
+
+// function factorial(n) {
+//     if (n === 1) {
+//         return 1;
+//     }
+//     return n * factorial(n - 1);
+// }
+// console.log(factorial(4));
+
+
+// function outer() {
+//     let value = 10;
+//     setTimeout(() => {
+//         console.log(value);
+//     }, 0);
+//     value = 20;
+// }
+// outer();
+
+
+// function count(n) {
+//     if (n === 0) return;
+//     console.log(n);
+//     count(n - 1);
+// }
+// count(5);
+
+// function factorial(n) {
+//     if (n === 1) return 1;
+//     return n * factorial(n - 1);
+// }
+// console.log(factorial(5));
+
+function print(n) {//IMPORTANT
+    if (n === 0) return;
+
+    print(n - 1);
+    console.log(n);
+}
+print(5);
