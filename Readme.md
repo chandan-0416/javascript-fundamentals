@@ -189,3 +189,20 @@
 - Error propagation
 - Async errors
 - Operational vs programmer errors
+
+16. MODULE 16 — ASYNCHRONOUS JAVASCRIPT
+- Synchronous execution
+- Asynchronous execution
+- Callbacks
+- Callback hell
+- Promises
+- Promise states
+- then
+- catch
+- finally
+- async
+- await
+- Promise.all
+- Promise.allSettled
+- Promise.race
+- Promise.any
