@@ -381,10 +381,10 @@
 // }
 // console.log(factorial(5));
 
-function print(n) {//IMPORTANT
-    if (n === 0) return;
+// function print(n) {//IMPORTANT
+//     if (n === 0) return;
 
-    print(n - 1);
-    console.log(n);
-}
-print(5);
+//     print(n - 1);
+//     console.log(n);
+// }
+// print(5);
