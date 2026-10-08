@@ -388,3 +388,109 @@
 //     console.log(n);
 // }
 // print(5);
+
+
+
+
+//Array
+
+// const numbers = [10, 20, 30, 40];
+
+// console.log(numbers[0]);
+// console.log(numbers[1]);
+// console.log(numbers[2]);
+// console.log(numbers[3]);
+// console.log(numbers.length);
+// console.log(typeof[numbers]);
+
+
+// Array are mutable.
+
+// const users = ["A", "B"];
+// users[0] = "G";
+// console.log(users);
+
+
+// const a =[1,2,3];
+// const b = a;
+// b.push(4);
+// console.log(a);
+
+
+// Methods:
+
+// const arr= [1,2,3,4];
+// const result = arr.push(5); // add element in end
+// const result = arr.pop(); //  removed from last
+// const result = arr.shift(); // removed from begining
+// const result = arr.unshift(5); // add element in begining
+// const result = arr.slice(1,3);
+// const result = arr.splice(1,2);
+// console.log(arr);
+// console.log(result);
+
+
+// const a = [1,2];
+// const b =[3, 4];
+
+// const result = a.concat(b);
+
+// console.log(result);
+// console.log(a);
+
+
+// const arr = ["A", "B", "C", "D"];
+// console.log(arr.indexOf("B"));
+// console.log(arr.indexOf("X"));
+// console.log(arr.includes("A"));
+
+
+// const users = [
+//     {
+//         id: 1, 
+//         name: "Chandan"
+//     },
+//     {
+//           id: 2,
+//           name: "Sintu"
+//     },
+//     {
+//           id: 3,
+//           name: "Sintu"
+//     }
+// ];
+
+// const result1 = users.find(user => user.name == "Sintu");
+// const result2 = users.find(user => user.id == 1);
+
+// const result = users.findIndex(user => user.id == 3);
+
+// console.log(result1);
+// console.log(result2);
+// console.log(result);
+
+
+
+// const numbers = [1,2,3,4,5];
+// const even = numbers.filter(n => n%2 === 0);
+// const odd = numbers.filter(n=> n %2 != 0);
+// console.log(even);
+// console.log(odd);
+
+
+// const prices = [100, 200, 300];
+// const discounted = prices.map(price => price * 0.9);
+// console.log(discounted);
+
+
+// const numbers = [1, 2, 3, 4];
+
+// const c = numbers.reduce(
+//     (a, b) => a + b)
+// console.log(c);
+
+
+// const numbers = [10, 2, 30];
+
+// numbers.sort((a,b) => a -b);
+// console.log(numbers);
